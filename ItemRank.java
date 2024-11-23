@@ -1,11 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.ds;
 
 
-public class ItemRank { //كلمة وعدد تكراراتها بنفس الدوكيومنت
+public class ItemRank { 
     Vocabulary term;
     int position ;
 
@@ -32,7 +29,7 @@ public class ItemRank { //كلمة وعدد تكراراتها بنفس الدو
     
     
     
-    public int incrementPosition (){ //يزيد بواحد لما يلقى كلمة معينة في دوكيومنت معين
+    public int incrementPosition (){ 
         return ++position; }
 
     
