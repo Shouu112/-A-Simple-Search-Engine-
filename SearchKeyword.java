@@ -1,14 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.ds;
 
 
- public class SearchKeyword { //يطلع اراي من عدد الدوكيومنت اللي موجودة فيها هذه الكلمة تكون كلها فولز ولما تطلع تصير ترو
+ public class SearchKeyword { 
     Vocabulary vocab;
 
-   boolean[] docemuntID; //اراي بوليين تايب ;
+   boolean[] docemuntID; 
 
     public SearchKeyword() {
         docemuntID = new boolean [50];
@@ -16,8 +13,8 @@ package com.mycompany.ds;
         
         
         for (int i = 0 ; i < len ; i++)
-            docemuntID [i] = false; //تعريف الاراي ووضع قيمة ابتدائية وهي فولز
-        vocab = new Vocabulary(""); //انشاء الكلمة
+            docemuntID [i] = false; 
+        vocab = new Vocabulary(""); 
     }
     
     
@@ -34,7 +31,7 @@ package com.mycompany.ds;
     
     
     public boolean insertId ( int docID){
-        if (! docemuntID[docID]){ //يستقبل عدد دوكيومنت اللي فيه الكلمة ويرجعها ترو
+        if (! docemuntID[docID]){ 
             this.docemuntID[docID] = true;
             return true;}
         return false; }
@@ -56,16 +53,16 @@ package com.mycompany.ds;
         for ( int i = 0 ; i < reLen ; i++)
             result[i]=docemuntID[i];
         
-        return result; //يرجع نسخة من الاراي 
+        return result; 
     }
     
     
     
     @Override
-    public String toString() { //تنسيق ظهور الكلمة مع سترينق من دوكيومنت الي تظهر فيها مع مراعاة الكلمة في بداية الدوكيومنت بدون فاصلة
+    public String toString() { 
         String docs = "";
-        for (int i = 0, j = 0 ; i < docemuntID.length; i++)//يمشي على الدوكيومنتز
-            if ( j == 0 && docemuntID [i]==true )//يمشي على الكلمات في الدوكيومنت الواحد ويرجع رقم الدوكيومنت اللي ظهرت فيه الكلمة بترو
+        for (int i = 0, j = 0 ; i < docemuntID.length; i++)
+            if ( j == 0 && docemuntID [i]==true )
             {
                 docs += " " + String.valueOf(i) ;
                 j++;
